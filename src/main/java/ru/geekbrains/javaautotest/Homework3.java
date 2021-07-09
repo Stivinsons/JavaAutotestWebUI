@@ -21,6 +21,7 @@ public class Homework3 {
     private static final String USER_LOGIN = "darara2525@nnacell.com";
     private static final String USER_PASSWORD = "qazwsxedcZSS";
 
+
     public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
