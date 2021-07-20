@@ -1,5 +1,6 @@
 package ru.geekbrains.javaautotest.feature.findGame;
 
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.geekbrains.javaautotest.base.BaseUITest;
@@ -10,6 +11,7 @@ public class PositiveTestingFindGame extends BaseUITest{
 
     @Test
     @DisplayName("Тестирование поиска игры")
+    @Feature("Positive test: Find game")
     public void loginWithBaseUserTest() throws InterruptedException {
         new HomePage(driver)
                 .pressSwitchToLoginPageButton()

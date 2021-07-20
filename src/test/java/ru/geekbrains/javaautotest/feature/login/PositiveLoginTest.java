@@ -1,5 +1,6 @@
 package ru.geekbrains.javaautotest.feature.login;
 
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.geekbrains.javaautotest.base.BaseUITest;
@@ -11,6 +12,7 @@ public class PositiveLoginTest extends BaseUITest{
 
     @Test
     @DisplayName("Тестирование авторизации")
+    @Feature("Positive test: Login")
     public void loginWithBaseUserTest() throws InterruptedException {
         new HomePage(driver)
                 .pressSwitchToLoginPageButton()

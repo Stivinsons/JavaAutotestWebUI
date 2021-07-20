@@ -1,5 +1,6 @@
 package ru.geekbrains.javaautotest.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +17,7 @@ public class HomePage extends BaseView {
     @FindBy(xpath = "//*[@id='disconnected_player_menu']")
     private WebElement switchToLoginPage;
 
+    @Step(value = "Click button switch to login page")
     public LoginPage pressSwitchToLoginPageButton() {
         switchToLoginPage.click();
         return new LoginPage(driver);

@@ -1,5 +1,6 @@
 package ru.geekbrains.javaautotest.pages;
 
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,66 +49,78 @@ public class LobbyPage extends BaseView {
         super(driver);
     }
 
+    @Step(value = "Click play now")
     public LobbyPage pressPlayNowButton() {
         buttonPlayNow.click();
         return this;
     }
 
+    @Step(value = "Click games mode")
     public LobbyPage pressGamesModeButton() {
         buttonGamesMode.click();
         return this;
     }
 
+    @Step(value = "Click simple games mode")
     public LobbyPage pressSimpleGamesMode() throws InterruptedException {
         choiceSimpleGamesMode.click();
         Thread.sleep(3000);
         return this;
     }
 
+    @Step(value = "Click time mode")
     public LobbyPage pressTimeModebutton() {
         buttonTimeMode.click();
         return this;
     }
 
+    @Step(value = "Click real time mode")
     public LobbyPage pressRealTimeMode() throws InterruptedException {
         choiceRealTimeMode.click();
         Thread.sleep(3000);
         return this;
     }
 
+    @Step(value = "Click lobby mode")
     public LobbyPage pressLobbyModeButton() {
         buttonLobbyMode.click();
         return this;
     }
 
+    @Step(value = "Click auto lobby mode")
     public LobbyPage pressAutoMode() throws InterruptedException {
         choiceAutoMode.click();
         Thread.sleep(3000);
         return this;
     }
 
+    @Step(value = "Click start game")
     public LobbyPage pressStartGamebutton() throws InterruptedException {
         buttonStartGame.click();
         Thread.sleep(3000);
         return this;
     }
 
+    @Step(value = "Click user avatar")
     public LobbyPage pressUserAvatar() {
         userAvatar.click();
         return this;
     }
 
+    @Step(value = "Click disconnect")
     public LobbyPage pressDisconnectButton() throws InterruptedException {
         buttonDisconnect.click();
         Thread.sleep(3000);
         return this;
     }
 
+    @Step(value = "check loading bar")
     public LobbyPage checkLoadingbar() {
         Assertions.assertTrue(loadingBar.isDisplayed());
         return this;
     }
 
+    @Step(value = "check enter button")
     public LobbyPage checkEnterButton() {
         Assertions.assertTrue(enterButton.isDisplayed());
         return this;

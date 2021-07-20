@@ -1,5 +1,6 @@
 package ru.geekbrains.javaautotest.pages;
 
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,18 +28,21 @@ public class LoginPage extends BaseView {
         super(driver);
     }
 
+    @Step(value = "Enter login {login}")
     public LoginPage enterLogin(String login) {
         loginTextInput.clear();
         loginTextInput.sendKeys(login);
         return this;
     }
 
+    @Step(value = "Enter password {password}")
     public LoginPage enterPassword(String password) {
         passwordTextInput.clear();
         passwordTextInput.sendKeys(password);
         return this;
     }
 
+    @Step(value = "Click checkbox")
     public LoginPage notRememberMeChekbox() {
         if (rememberMeCheckBox.isSelected()) {
             rememberMeCheckBox.click();
@@ -46,6 +50,7 @@ public class LoginPage extends BaseView {
         return this;
     }
 
+    @Step(value = "Check loginned user")
     public HomePage checkLoginnedUser() {
         Assertions.assertTrue(loginnedUser.isDisplayed());
         return new HomePage(driver);
